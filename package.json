@@ -1,0 +1,42 @@
+{
+  "name": "ipfs-webui2",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "lint": "standard",
+    "release": "aegir release",
+    "build": "parcel build src/index.html",
+    "test": "aegir test",
+    "test:node": "aegir test --target node",
+    "test:browser": "aegir test --target browser",
+    "coverage": "aegir coverage",
+    "coverage:publish": "aegir coverage --upload"
+  },
+  "author": "Protocol Labs",
+  "license": "MIT",
+  "dependencies": {
+    "history": "^4.7.2",
+    "ipfs-css": "^0.3.0",
+    "preact": "^8.2.7",
+    "preact-router": "^2.6.0",
+    "tachyons": "^4.9.1",
+    "unistore": "^3.0.4",
+    "window.ipfs-fallback": "^1.0.0"
+  },
+  "devDependencies": {
+    "aegir": "^13.1.0",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "parcel-bundler": "^1.7.1",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "h"
+    ]
+  }
+}
