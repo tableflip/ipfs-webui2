@@ -11,8 +11,11 @@
     "test": "aegir test",
     "test:node": "aegir test --target node",
     "test:browser": "aegir test --target browser",
+    "test:e2e": "npm-run-all --parallel --race serve test:e2e:runner",
+    "test:e2e:runner": "ava test/e2e",
     "coverage": "aegir coverage",
-    "coverage:publish": "aegir coverage --upload"
+    "coverage:publish": "aegir coverage --upload",
+    "serve": "ecstatic dist --cache=0 --port=4321"
   },
   "author": "Protocol Labs",
   "license": "MIT",
@@ -27,10 +30,14 @@
   },
   "devDependencies": {
     "aegir": "^13.1.0",
+    "ava": "^0.25.0",
     "babel-eslint": "^8.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
+    "ecstatic": "^3.2.0",
+    "npm-run-all": "^4.1.2",
     "parcel-bundler": "^1.7.1",
+    "puppeteer": "^1.3.0",
     "standard": "^11.0.1"
   },
   "standard": {
